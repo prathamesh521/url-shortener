@@ -16,6 +16,7 @@ const connectDB = async () => {
 }
 
 connectDB();
+app.use(express.urlencoded({extended: true}));
 
 app.use('/api/url', require('./routes/urlRoutes'));
 
